@@ -69,7 +69,7 @@ stark,arya,cat,1986-02-19
 ]]></tdml:document>
     <tdml:errors>
       <tdml:error>Parse Error</tdml:error>
-      <tdml:error>Found out of scope delimiter: ,</tdml:error>
+      <tdml:error>Found out of scope delimiter</tdml:error>
     </tdml:errors>
   </tdml:parserTestCase>
   
