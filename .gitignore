@@ -2,7 +2,7 @@
 bin
 lib_managed
 target
-project/target/
+project/
 .cache-tests
 .cache-main
 
