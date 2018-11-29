@@ -1,12 +1,19 @@
 CSV
 ====
 
-DFDL Schemas for CSV
+DFDL Schemas for CSV and CSV-like data formats.
 
-It works with Daffodil, but not tested with IBM DFDL.
+CSV stands for "Comma Separated Values". It is less a data format than a theme
+for many kinds of related data formats. This schema project includes more than one 
+variation. 
 
-Notes:
+The basic csv.dfdl.xsd schema is portable DFDL - it runs on both IBM DFDL, and 
+on the Apache Daffodil (Incubating - as of 2019-05-29), DFDL implementation.
 
-Included a copy of the daffodil built-in-formats for completeness.  Normally if using daffodil you
-would not need to physically include the file as it comes in the JAR with daffodil.
+Other variations include csvEnforceHeaders.dfdl.xsd which uses 
+dfdl:occursCountKind 'expression' and DFDL's fn:count(....) function to enforce
+the data rows having the same number of items as there are header titles.
+ 
+
+
 

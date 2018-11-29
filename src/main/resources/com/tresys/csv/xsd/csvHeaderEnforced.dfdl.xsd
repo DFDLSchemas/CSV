@@ -45,7 +45,7 @@ SOFTWARE.
         terminator="" textTrimKind="none" initiatedContent="no" ignoreCase="no"
         separatorPosition="infix" occursCountKind="implicit"
         emptyValueDelimiterPolicy="both" representation="text" textNumberRep="standard"
-        lengthKind="delimited" encoding="ASCII" encodingErrorPolicy="error" />
+        lengthKind="delimited" encoding="ASCII" />
     </xs:appinfo>
   </xs:annotation>
 
@@ -63,7 +63,12 @@ SOFTWARE.
         <xs:element name="record" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence dfdl:separator=",">
-              <xs:element name="item" type="xs:string" maxOccurs="unbounded"/>
+            <!-- This version of item enforces the number of items matching
+                 The number of headers. However it is not portable across
+                 Daffodil and IBM DFDL, so is commented out. --> 
+              <xs:element name="item" type="xs:string" maxOccurs="unbounded"
+                dfdl:occursCount="{ fn:count(../../header/title) }"
+                dfdl:occursCountKind="expression" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -46,7 +46,9 @@ object TestCSV {
 class TestCSV {
   import TestCSV._
 
-  @Test def test_csv_test() { runner.runOneTest("csv_test") }
+  @Test def test_csv_test_p() { runner.runOneTest("csv_test_p") }
+  @Test def test_csv_test_u() { runner.runOneTest("csv_test_u") }
   @Test def test_csv_test_2() { runner.runOneTest("csv_test_2") }
+  @Test def test_csv_test_3() { runner.runOneTest("csv_test_3") }
 
 }
