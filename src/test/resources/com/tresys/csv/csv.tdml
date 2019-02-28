@@ -32,8 +32,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE
 SOFTWARE.
 ]]> ?>
 <testSuite suiteName="Namespaces"
-  xmlns="http://www.ibm.com/xmlns/dfdl/testData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:ct="http://w3.ibm.com/xmlns/dfdl/ctInfoset" xmlns:tdml="http://www.ibm.com/xmlns/dfdl/testData">
+  xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
+  xmlns:tdml="http://www.ibm.com/xmlns/dfdl/testData"
+  defaultRoundTrip="onePass">
 
   <?Comment
     Test name: csv_test
@@ -43,7 +44,8 @@ SOFTWARE.
   ?>
   
   <tdml:parserTestCase name="csv_test" root="file"
-    model="com/tresys/csv/xsd/csv.dfdl.xsd" description="csv test">
+    model="com/tresys/csv/xsd/csv.dfdl.xsd" description="csv test"
+    roundTrip="onePass">
     <tdml:document>
       <tdml:documentPart type="file">data/simpleCSV.csv</tdml:documentPart>
     </tdml:document>
@@ -73,5 +75,4 @@ stark,arya,cat,1986-02-19
     </tdml:errors>
   </tdml:parserTestCase>
   
- 
 </testSuite>

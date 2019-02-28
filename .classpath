@@ -11,6 +11,7 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/daffodil-lib"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/daffodil-runtime1"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/daffodil-runtime1-unparser"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/daffodil-tdml"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/daffodil-tdml-lib"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/daffodil-tdml-processor"/>
 	<classpathentry kind="output" path="target/scala-2.11/test-classes"/>
 </classpath>
