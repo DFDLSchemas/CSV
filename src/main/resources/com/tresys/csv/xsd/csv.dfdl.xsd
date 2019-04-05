@@ -42,8 +42,7 @@ SOFTWARE.
   <xs:annotation>
     <xs:appinfo source="http://www.ogf.org/dfdl/">
       <dfdl:format ref="ex:GeneralFormat" separator="" initiator=""
-        terminator="" leadingSkip='0' textTrimKind="none" initiatedContent="no"
-        alignment="implicit" alignmentUnits="bits" trailingSkip="0" ignoreCase="no"
+        terminator="" textTrimKind="none" initiatedContent="no" ignoreCase="no"
         separatorPosition="infix" occursCountKind="implicit"
         emptyValueDelimiterPolicy="both" representation="text" textNumberRep="standard"
         lengthKind="delimited" encoding="ASCII" />
