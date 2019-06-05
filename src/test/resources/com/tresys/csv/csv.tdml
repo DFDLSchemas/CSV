@@ -12,27 +12,16 @@
       Purpose: This test is to exercise the csv schema.
   -->
   
-  <tdml:parserTestCase name="csv_test_p" root="file"
-    model="com/tresys/csv/xsd/csv.dfdl.xsd" description="csv test"
-    roundTrip="none">
+  <tdml:parserTestCase name="csv_test" root="file"
+    model="com/tresys/csv/xsd/csv.dfdl.xsd" description="csv test">
     <tdml:document>
       <tdml:documentPart type="file">data/simpleCSV.csv</tdml:documentPart>
     </tdml:document>
     <tdml:infoset>
+      <!-- <tdml:dfdlInfoset><ex:file xmlns:ex="http://example.com"></ex:file></tdml:dfdlInfoset> -->
       <tdml:dfdlInfoset type="file">infosets/simpleCSV.xml</tdml:dfdlInfoset>
     </tdml:infoset>
   </tdml:parserTestCase>
-  
-  <tdml:unparserTestCase name="csv_test_u" root="file"
-    model="com/tresys/csv/xsd/csv.dfdl.xsd" description="csv test"
-    roundTrip="none">
-    <tdml:document>
-      <tdml:documentPart type="file">data/simpleCSV.csv</tdml:documentPart>
-    </tdml:document>
-    <tdml:infoset>
-      <tdml:dfdlInfoset type="file">infosets/simpleCSV.xml</tdml:dfdlInfoset>
-    </tdml:infoset>
-  </tdml:unparserTestCase>
   
   <!--
     Test name: csv_test_2
