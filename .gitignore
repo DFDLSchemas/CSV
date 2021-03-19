@@ -5,4 +5,5 @@ target
 project/
 .cache-tests
 .cache-main
+.bsp/
 

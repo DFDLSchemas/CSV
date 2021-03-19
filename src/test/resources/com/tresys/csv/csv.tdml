@@ -3,7 +3,10 @@
 <testSuite suiteName="Namespaces"
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
   xmlns:tdml="http://www.ibm.com/xmlns/dfdl/testData"
-  defaultRoundTrip="onePass">
+  xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
+  defaultRoundTrip="onePass"
+  defaultConfig="csv.cfg">
+
 
   <!-- 
     Test name: csv_test
