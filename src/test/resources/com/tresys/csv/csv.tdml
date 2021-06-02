@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<testSuite suiteName="Namespaces"
+<tdml:testSuite suiteName="Namespaces"
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
   xmlns:tdml="http://www.ibm.com/xmlns/dfdl/testData"
   xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
@@ -60,4 +60,4 @@ johnson,john,henry
     </tdml:errors>
   </tdml:parserTestCase>
   
-</testSuite>
+</tdml:testSuite>
