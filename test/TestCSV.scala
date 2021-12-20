@@ -37,7 +37,8 @@ import org.apache.daffodil.tdml.Runner
 import org.junit.AfterClass
 
 object TestCSV {
-  lazy val runner = Runner("", "csv.tdml")
+  val subdirs = "" // no subdirectories. Files are directly in test subdir of the project.
+  lazy val runner = Runner(subdirs, "csv.tdml")
 
   @AfterClass def shutdown: Unit = { runner.reset }
 

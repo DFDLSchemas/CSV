@@ -1,22 +1,19 @@
 name := "dfdl-csv"
  
-organization := "com.tresys"
+organization := "com.owlcyberdefense"
  
 version := "0.1.0-SNAPSHOT"
  
 scalaVersion := "2.12.15"
 
-ThisBuild / useCoursier := false
+ThisBuild / useCoursier := false // needed for retrieveManaged to work.
 
-// Populate lib_managed with all managed dependencies. 
-// This is just here because it is interesting to look at all the 
-// stuff that gets pulled in. 
-retrieveManaged := true
+retrieveManaged := true // populate lib_managed
  
 libraryDependencies ++= Seq(
-  "org.apache.daffodil" %% "daffodil-tdml-processor" % "3.2.1" ,
-  "junit" % "junit" % "4.13.2",
-  "com.github.sbt" % "junit-interface" % "0.13.2"
+  "org.apache.daffodil" %% "daffodil-tdml-processor" % "3.2.1" % "test",
+  "junit" % "junit" % "4.13.2" % "test",
+  "com.github.sbt" % "junit-interface" % "0.13.2" % "test"
 )
 
 testOptions += Tests.Argument(TestFrameworks.JUnit, "-v")
