@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<tdml:testSuite
-  xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
+<testSuite
+  xmlns="http://www.ibm.com/xmlns/dfdl/testData"
   xmlns:tdml="http://www.ibm.com/xmlns/dfdl/testData"
+  xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
   xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
   defaultRoundTrip="onePass"
   defaultConfig="csv.cfg">
@@ -15,16 +16,17 @@
       Purpose: This test is to exercise the csv schema.
   -->
   
-  <tdml:parserTestCase name="csv_test" root="file"
-    model="csv.dfdl.xsd" description="csv test">
-    <tdml:document>
-      <tdml:documentPart type="file">simpleCSV.csv</tdml:documentPart>
-    </tdml:document>
-    <tdml:infoset>
-      <!-- <tdml:dfdlInfoset><ex:file xmlns:ex="http://example.com"></ex:file></tdml:dfdlInfoset> -->
-      <tdml:dfdlInfoset type="file">simpleCSV.xml</tdml:dfdlInfoset>
-    </tdml:infoset>
-  </tdml:parserTestCase>
+  <parserTestCase name="csv_test" root="file"
+    model="csv.dfdl.xsd" description="csv test"
+    implementations="ibm daffodil">
+    <document>
+      <documentPart type="file">simpleCSV.csv</documentPart>
+    </document>
+    <infoset>
+      <!-- <dfdlInfoset><ex:file xmlns:ex="http://example.com"></ex:file></dfdlInfoset> -->
+      <dfdlInfoset type="file">simpleCSV.xml</dfdlInfoset>
+    </infoset>
+  </parserTestCase>
   
   <!--
     Test name: csv_test_2
@@ -34,30 +36,30 @@
                of header title number with element number.
   -->
   
-  <tdml:parserTestCase name="csv_test_2" root="file"
+  <parserTestCase name="csv_test_2" root="file"
     model="csvHeaderEnforced.dfdl.xsd" description="csv test"
     implementations="daffodil">
-    <tdml:document><![CDATA[last,first,middle,DOB
+    <document><![CDATA[last,first,middle,DOB
 baratheon,robert,brandon,1988-03-24,extra,extra
 johnson,john,henry,1986-01-23
 stark,arya,cat,1986-02-19
-]]></tdml:document>
-    <tdml:errors>
-      <tdml:error>Parse Error</tdml:error>
-      <tdml:error>Found out of scope delimiter</tdml:error>
-    </tdml:errors>
-  </tdml:parserTestCase>
+]]></document>
+    <errors>
+      <error>Parse Error</error>
+      <error>Found out of scope delimiter</error>
+    </errors>
+  </parserTestCase>
   
-  <tdml:parserTestCase name="csv_test_3" root="file"
+  <parserTestCase name="csv_test_3" root="file"
     model="csvHeaderEnforced.dfdl.xsd" description="csv test"
     implementations="daffodil">
-    <tdml:document><![CDATA[last,first,middle,DOB
+    <document><![CDATA[last,first,middle,DOB
 johnson,john,henry
-]]></tdml:document>
-    <tdml:errors>
-      <tdml:error>Parse Error</tdml:error>
-      <tdml:error>Found out of scope delimiter</tdml:error>
-    </tdml:errors>
-  </tdml:parserTestCase>
+]]></document>
+    <errors>
+      <error>Parse Error</error>
+      <error>Found out of scope delimiter</error>
+    </errors>
+  </parserTestCase>
   
-</tdml:testSuite>
+</testSuite>

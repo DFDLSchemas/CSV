@@ -30,16 +30,17 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE
 SOFTWARE.
  -->
 
-<xs:schema
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
   xmlns:ex="http://example.com"
   targetNamespace="http://example.com">
 
-  <xs:include schemaLocation="org/apache/daffodil/xsd/DFDLGeneralFormat.dfdl.xsd" />
+  <include schemaLocation="org/apache/daffodil/xsd/DFDLGeneralFormat.dfdl.xsd" />
 
-  <xs:annotation>
-    <xs:appinfo source="http://www.ogf.org/dfdl/">
+  <annotation>
+    <appinfo source="http://www.ogf.org/dfdl/">
       <dfdl:format
         ref="ex:GeneralFormatPortable"
         representation="text"
@@ -48,29 +49,29 @@ SOFTWARE.
         separator=""
         separatorPosition="infix"
       />
-    </xs:appinfo>
-  </xs:annotation>
+    </appinfo>
+  </annotation>
 
-  <xs:element name="file">
-    <xs:complexType>
-      <xs:sequence dfdl:separator="%NL;" dfdl:separatorPosition="postfix">
-        <xs:element name="header" minOccurs="0" maxOccurs="1"
+  <element name="file">
+    <complexType>
+      <sequence dfdl:separator="%NL;" dfdl:separatorPosition="postfix">
+        <element name="header" minOccurs="0" maxOccurs="1"
           dfdl:occursCountKind="implicit">
-          <xs:complexType>
-            <xs:sequence dfdl:separator=",">
-              <xs:element name="title" type="xs:string" maxOccurs="unbounded" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="record" maxOccurs="unbounded">
-          <xs:complexType>
-            <xs:sequence dfdl:separator=",">
-              <xs:element name="item" type="xs:string" maxOccurs="unbounded"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+          <complexType>
+            <sequence dfdl:separator=",">
+              <element name="title" type="xs:string" maxOccurs="unbounded" />
+            </sequence>
+          </complexType>
+        </element>
+        <element name="record" maxOccurs="unbounded">
+          <complexType>
+            <sequence dfdl:separator=",">
+              <element name="item" type="xs:string" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
 
-</xs:schema>
+</schema>
