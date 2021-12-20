@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<tdml:testSuite suiteName="Namespaces"
+<tdml:testSuite
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
   xmlns:tdml="http://www.ibm.com/xmlns/dfdl/testData"
   xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
@@ -16,13 +16,13 @@
   -->
   
   <tdml:parserTestCase name="csv_test" root="file"
-    model="com/tresys/csv/xsd/csv.dfdl.xsd" description="csv test">
+    model="csv.dfdl.xsd" description="csv test">
     <tdml:document>
-      <tdml:documentPart type="file">data/simpleCSV.csv</tdml:documentPart>
+      <tdml:documentPart type="file">simpleCSV.csv</tdml:documentPart>
     </tdml:document>
     <tdml:infoset>
       <!-- <tdml:dfdlInfoset><ex:file xmlns:ex="http://example.com"></ex:file></tdml:dfdlInfoset> -->
-      <tdml:dfdlInfoset type="file">infosets/simpleCSV.xml</tdml:dfdlInfoset>
+      <tdml:dfdlInfoset type="file">simpleCSV.xml</tdml:dfdlInfoset>
     </tdml:infoset>
   </tdml:parserTestCase>
   
@@ -35,7 +35,7 @@
   -->
   
   <tdml:parserTestCase name="csv_test_2" root="file"
-    model="com/tresys/csv/xsd/csvHeaderEnforced.dfdl.xsd" description="csv test"
+    model="csvHeaderEnforced.dfdl.xsd" description="csv test"
     implementations="daffodil">
     <tdml:document><![CDATA[last,first,middle,DOB
 baratheon,robert,brandon,1988-03-24,extra,extra
@@ -49,7 +49,7 @@ stark,arya,cat,1986-02-19
   </tdml:parserTestCase>
   
   <tdml:parserTestCase name="csv_test_3" root="file"
-    model="com/tresys/csv/xsd/csvHeaderEnforced.dfdl.xsd" description="csv test"
+    model="csvHeaderEnforced.dfdl.xsd" description="csv test"
     implementations="daffodil">
     <tdml:document><![CDATA[last,first,middle,DOB
 johnson,john,henry

@@ -37,7 +37,7 @@ import org.apache.daffodil.tdml.Runner
 import org.junit.AfterClass
 
 object TestCSV {
-  lazy val runner = Runner("/com/tresys/csv/", "csv.tdml")
+  lazy val runner = Runner("", "csv.tdml")
 
   @AfterClass def shutdown: Unit = { runner.reset }
 
