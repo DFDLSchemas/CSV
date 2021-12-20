@@ -11,7 +11,7 @@ ThisBuild / useCoursier := false // needed for retrieveManaged to work.
 retrieveManaged := true // populate lib_managed
  
 libraryDependencies ++= Seq(
-  "org.apache.daffodil" %% "daffodil-tdml-processor" % "3.2.1" % "test",
+  "org.apache.daffodil" %% "daffodil-tdml-processor" % "3.2.0" % "test",
   "junit" % "junit" % "4.13.2" % "test",
   "com.github.sbt" % "junit-interface" % "0.13.2" % "test"
 )
