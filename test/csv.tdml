@@ -6,7 +6,7 @@
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
   xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
   defaultRoundTrip="onePass"
-  defaultConfig="csv.cfg">
+  defaultConfig="csv.cfg.xml">
 
 
   <!-- 
@@ -23,7 +23,6 @@
       <documentPart type="file">simpleCSV.csv</documentPart>
     </document>
     <infoset>
-      <!-- <dfdlInfoset><ex:file xmlns:ex="http://example.com"></ex:file></dfdlInfoset> -->
       <dfdlInfoset type="file">simpleCSV.xml</dfdlInfoset>
     </infoset>
   </parserTestCase>

@@ -38,34 +38,21 @@ SOFTWARE.
   targetNamespace="http://example.com"
   elementFormDefault="unqualified">
 
-  <include schemaLocation="csv-base-format.dfdl.xsd" />
+  <include schemaLocation="org/apache/daffodil/xsd/DFDLGeneralFormat.dfdl.xsd" />
 
   <annotation>
     <appinfo source="http://www.ogf.org/dfdl/">
-      <dfdl:format ref="ex:baseFormat"/>
+      <dfdl:defineFormat name="baseFormat">
+        <dfdl:format
+          ref="ex:GeneralFormatPortable"
+          representation="text"
+          encoding="ASCII"
+          lengthKind="delimited"
+          separator=""
+          separatorPosition="infix"
+        />
+      </dfdl:defineFormat>
     </appinfo>
   </annotation>
-
-  <element name="file">
-    <complexType>
-      <sequence dfdl:separator="%NL;" dfdl:separatorPosition="postfix">
-        <element name="header" minOccurs="0" maxOccurs="1"
-          dfdl:occursCountKind="implicit">
-          <complexType>
-            <sequence dfdl:separator=",">
-              <element name="title" type="xs:string" maxOccurs="unbounded" />
-            </sequence>
-          </complexType>
-        </element>
-        <element name="record" maxOccurs="unbounded">
-          <complexType>
-            <sequence dfdl:separator=",">
-              <element name="item" type="xs:string" maxOccurs="unbounded"/>
-            </sequence>
-          </complexType>
-        </element>
-      </sequence>
-    </complexType>
-  </element>
 
 </schema>

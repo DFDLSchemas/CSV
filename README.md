@@ -8,7 +8,7 @@ for many kinds of related data formats. This schema project includes more than o
 variation. 
 
 The basic csv.dfdl.xsd schema is portable DFDL - it runs on both IBM DFDL, and 
-on the Apache Daffodil (Incubating - as of 2019-05-29), DFDL implementation.
+on the Apache Daffodil DFDL implementation.
 
 Other variations include csvEnforceHeaders.dfdl.xsd which uses 
 dfdl:occursCountKind 'expression' and DFDL's fn:count(....) function to enforce

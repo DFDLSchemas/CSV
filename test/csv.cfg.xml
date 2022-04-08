@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dfdlConfig
+	xmlns="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext">
+    <tunables>
+      <suppressSchemaDefinitionWarnings>
+        encodingErrorPolicyError
+      </suppressSchemaDefinitionWarnings>
+    </tunables>
+</dfdlConfig>

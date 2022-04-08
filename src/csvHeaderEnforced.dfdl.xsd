@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 
 <!-- 
-Copyright (c) 2012-2021 Owl Cyber Defense. All rights reserved.
+Copyright (c) 2012-2022 Owl Cyber Defense. All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal with
@@ -36,20 +36,14 @@ SOFTWARE.
   xmlns:fn="http://www.w3.org/2005/xpath-functions"
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
   xmlns:ex="http://example.com"
-  targetNamespace="http://example.com">
+  targetNamespace="http://example.com"
+  elementFormDefault="unqualified">
 
-  <include schemaLocation="org/apache/daffodil/xsd/DFDLGeneralFormat.dfdl.xsd" />
+  <include schemaLocation="csv-base-format.dfdl.xsd" />
 
   <annotation>
     <appinfo source="http://www.ogf.org/dfdl/">
-      <dfdl:format
-        ref="ex:GeneralFormatPortable"
-        representation="text"
-        encoding="ASCII"
-        lengthKind="delimited"
-        separator=""
-        separatorPosition="infix"
-      />
+      <dfdl:format ref="ex:baseFormat"/>
     </appinfo>
   </annotation>
 
