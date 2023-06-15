@@ -38,13 +38,13 @@ SOFTWARE.
   targetNamespace="http://example.com"
   elementFormDefault="unqualified">
 
-  <include schemaLocation="org/apache/daffodil/xsd/DFDLGeneralFormat.dfdl.xsd" />
+  <include schemaLocation="org/apache/daffodil/xsd/DFDLGeneralFormatPortable.dfdl.xsd" />
 
   <annotation>
     <appinfo source="http://www.ogf.org/dfdl/">
       <dfdl:defineFormat name="baseFormat">
         <dfdl:format
-          ref="ex:GeneralFormatPortable"
+          ref="ex:GeneralFormat"
           representation="text"
           encoding="ASCII"
           lengthKind="delimited"
