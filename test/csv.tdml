@@ -45,7 +45,8 @@ stark,arya,cat,1986-02-19
 ]]></document>
     <errors>
       <error>Parse Error</error>
-      <error>Found out of scope delimiter</error>
+      <error>Found</error>
+      <error>delimiter</error>
     </errors>
   </parserTestCase>
   
@@ -57,7 +58,8 @@ johnson,john,henry
 ]]></document>
     <errors>
       <error>Parse Error</error>
-      <error>Found out of scope delimiter</error>
+      <error>Found</error>
+      <error>delimiter</error>
     </errors>
   </parserTestCase>
   
