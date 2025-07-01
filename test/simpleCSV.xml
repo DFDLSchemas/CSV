@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ex:file xmlns:ex="http://example.com">
+<file>
   <header>
     <title>last</title>
     <title>first</title>
@@ -24,4 +24,4 @@
     <item>cat</item>
     <item>1986-02-19</item>
   </record>
-</ex:file>
+</file>

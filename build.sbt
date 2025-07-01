@@ -2,7 +2,7 @@ name := "dfdl-csv"
  
 organization := "com.owlcyberdefense"
  
-version := "0.1.0-SNAPSHOT"
+version := "0.1.1-SNAPSHOT"
  
 // to test against IBM DFDL uncomment this line
 // IBMDFDLCrossTesterPlugin.settings

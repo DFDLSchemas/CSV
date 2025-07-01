@@ -62,5 +62,28 @@ johnson,john,henry
       <error>delimiter</error>
     </errors>
   </parserTestCase>
-  
+
+  <!--
+  This test is of Unicode with Kanji Characters.
+
+  For the sake of non Japanese readers, here's the romanization of the
+  names in this small test.
+| Last  | First   | Middle  | Date-of-Birth | Romanized Name    |
+| 山田   | 太郎    | 翔      | 1990-01-15    | Yamada Tarō Shō   |
+| 佐藤   | 花子    | 美      | 1985-06-20    | Satō Hanako Mi    |
+| 鈴木   | 一郎    | 直      | 1978-11-03    | Suzuki Ichirō Nao |
+| 高橋   | 愛     | 裕      | 1995-03-10    | Takahashi Ai Yū   |
+| 田中   | 健     | 大      | 1982-07-27    | Tanaka Ken Dai    |
+  -->
+
+  <parserTestCase name="unicode_csv_test" root="file"
+                  model="csv.dfdl.xsd" description="unicode csv test"
+                  implementations="ibm daffodil">
+    <document>
+      <documentPart type="file">kanjiCSV.csv</documentPart>
+    </document>
+    <infoset>
+      <dfdlInfoset type="file">kanjiCSV.xml</dfdlInfoset>
+    </infoset>
+  </parserTestCase>
 </testSuite>
