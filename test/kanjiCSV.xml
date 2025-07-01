@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<file>
+  <header>
+    <title>last</title>
+    <title>first</title>
+    <title>middle</title>
+    <title>DOB</title>
+  </header>
+  <record>
+    <item>山田</item>
+    <item>太郎</item>
+    <item>翔</item>
+    <item>1990-01-15</item>
+  </record>
+  <record>
+    <item>佐藤</item>
+    <item>花子</item>
+    <item>美</item>
+    <item>1985-06-20</item>
+  </record>
+  <record>
+    <item>鈴木</item>
+    <item>一郎</item>
+    <item>直</item>
+    <item>1978-11-03</item>
+  </record>
+  <record>
+    <item>高橋</item>
+    <item>愛</item>
+    <item>裕</item>
+    <item>1995-03-10</item>
+  </record>
+  <record>
+    <item>田中</item>
+    <item>健</item>
+    <item>大</item>
+    <item>1982-07-27</item>
+  </record>
+</file>

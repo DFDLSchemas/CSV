@@ -34,10 +34,10 @@ SOFTWARE.
   xmlns="http://www.w3.org/2001/XMLSchema"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
-  xmlns:ex="http://example.com">
-  <!-- no target namespace -->
+  xmlns:ex="http://example.com"
+  targetNamespace="http://example.com">
 
-  <import namespace="http://example.com" schemaLocation="csvFileType.dfdl.xsd" />
+  <include schemaLocation="csv-base-format.dfdl.xsd" />
 
   <annotation>
     <appinfo source="http://www.ogf.org/dfdl/">
@@ -45,6 +45,23 @@ SOFTWARE.
     </appinfo>
   </annotation>
 
-  <element name="file" type="ex:csvFileType"/>
+  <complexType name="csvFileType">
+    <sequence dfdl:separator="%NL;" dfdl:separatorPosition="postfix">
+      <element name="header" minOccurs="0" dfdl:occursCountKind="implicit">
+        <complexType>
+          <sequence dfdl:separator=",">
+            <element name="title" type="xs:string" maxOccurs="unbounded"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="record" maxOccurs="unbounded">
+        <complexType>
+          <sequence dfdl:separator=",">
+            <element name="item" type="xs:string" maxOccurs="unbounded"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
 
 </schema>

@@ -38,17 +38,19 @@ import org.junit.AfterClass
 
 object TestCSV {
   val subdirs = "" // no subdirectories. Files are directly in test subdir of the project.
-  lazy val runner = Runner(subdirs, "csv.tdml")
+  private lazy val runner = Runner(subdirs, "csv.tdml")
 
-  @AfterClass def shutdown: Unit = { runner.reset() }
+  @AfterClass def shutdown(): Unit = { runner.reset() }
 
 }
 
 class TestCSV {
   import TestCSV._
 
-  @Test def test_csv_test() = { runner.runOneTest("csv_test") }
-  @Test def test_csv_test_2() = { runner.runOneTest("csv_test_2") }
-  @Test def test_csv_test_3() = { runner.runOneTest("csv_test_3") }
+  @Test def test_csv_test(): Unit = { runner.runOneTest("csv_test") }
+  @Test def test_csv_test_2(): Unit = { runner.runOneTest("csv_test_2") }
+  @Test def test_csv_test_3(): Unit = { runner.runOneTest("csv_test_3") }
+
+  @Test def test_unicode_csv_test(): Unit = { runner.runOneTest("unicode_csv_test") }
 
 }

@@ -35,11 +35,10 @@ SOFTWARE.
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:fn="http://www.w3.org/2005/xpath-functions"
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
-  xmlns:ex="http://example.com"
-  targetNamespace="http://example.com"
-  elementFormDefault="unqualified">
+  xmlns:ex="http://example.com">
+  <!-- no target namespace -->
 
-  <include schemaLocation="csv-base-format.dfdl.xsd" />
+  <import namespace="http://example.com" schemaLocation="csvHeaderEnforcedType.dfdl.xsd"/>
 
   <annotation>
     <appinfo source="http://www.ogf.org/dfdl/">
@@ -47,34 +46,6 @@ SOFTWARE.
     </appinfo>
   </annotation>
 
-  <element name="file">
-    <complexType>
-      <sequence dfdl:separator="%NL;" dfdl:separatorPosition="postfix">
-        <element name="header" minOccurs="0" maxOccurs="1"
-          dfdl:occursCountKind="implicit">
-          <complexType>
-            <sequence dfdl:separator=",">
-              <element name="title" type="xs:string" maxOccurs="unbounded" />
-            </sequence>
-          </complexType>
-        </element>
-        <element name="record" maxOccurs="unbounded">
-          <complexType>
-            <sequence dfdl:separator=",">
-              <!--
-              This version of item enforces the number of items matching
-              The number of headers. However it is not portable across
-              Daffodil and IBM DFDL due to use of the fn:count(..) function
-              not implemented in IBM DFDL as of this writing.
-              -->
-              <element name="item" type="xs:string" maxOccurs="unbounded"
-                dfdl:occursCount="{ fn:count(../../header/title) }"
-                dfdl:occursCountKind="expression" />
-            </sequence>
-          </complexType>
-        </element>
-      </sequence>
-    </complexType>
-  </element>
+  <element name="file" type="ex:csvHeaderEnforcedType"/>
 
 </schema>

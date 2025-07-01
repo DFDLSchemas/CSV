@@ -34,9 +34,8 @@ SOFTWARE.
   xmlns="http://www.w3.org/2001/XMLSchema"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
-  xmlns:ex="http://example.com"
-  targetNamespace="http://example.com"
-  elementFormDefault="unqualified">
+  xmlns:ex="http://example.com">
+  <!-- no target namespace. Intended for include, not import -->
 
   <include schemaLocation="org/apache/daffodil/xsd/DFDLGeneralFormatPortable.dfdl.xsd" />
 
@@ -46,7 +45,7 @@ SOFTWARE.
         <dfdl:format
           ref="ex:GeneralFormat"
           representation="text"
-          encoding="ASCII"
+          encoding="{ $dfdl:encoding }"
           lengthKind="delimited"
           separator=""
           separatorPosition="infix"
