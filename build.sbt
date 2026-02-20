@@ -1,16 +1,11 @@
-name := "dfdl-csv"
- 
-organization := "com.owlcyberdefense"
- 
-version := "0.1.1-SNAPSHOT"
- 
-// to test against IBM DFDL uncomment this line
-// IBMDFDLCrossTesterPlugin.settings
+val root = (project in file("."))
+  .settings(
+    name := "dfdl-csv",
 
-useCoursier := false // needed for retrieveManaged to work.
+    organization := "com.owlcyberdefense",
 
-retrieveManaged := true // populate lib_managed
+    version := "0.1.1-SNAPSHOT",
 
-enablePlugins(DaffodilPlugin)
-
-daffodilFlatLayout := true
+    daffodilFlatLayout := true
+  )
+  .daffodilProject()
